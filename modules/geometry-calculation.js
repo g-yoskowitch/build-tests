@@ -1,13 +1,22 @@
+
+// const Point = require('./ecs6-class/point')
 const Line = require('./ecs6-class/line')
 
 const calculateDistance = (point1, point2) => {
     let distanceX = (point2.x - point1.x) ** 2;
-    let distanceY = (point2.y - point2.y) ** 2;
+    let distanceY = (point2.y - point1.y) ** 2;
     const distance = Math.sqrt(distanceX + distanceY);
     return distance;
 }
 
 const calculateJunctionPoint = (line1, line2) => {
+    // line1.calculateSlope()
+    // line1.calculateNOfLineFunction()
+    // line2.calculateSlope()
+    // line2.calculateNOfLineFunction()
+    if (line1 == undefined || line2 == undefined) {
+        throw new Error("must to be 2 lines");
+    }
     if (line1.slope === line2.slope) {
         if (line1.n === line2.n) {
             return true
@@ -23,10 +32,13 @@ const calculateJunctionPoint = (line1, line2) => {
     }
 }
 
-const isPointOnLine = (line, point) => {
+const isPointOnLine = (line, point) => {    
     const proxyLine = new Line({ point1: line.point1, point2: point })
     proxyLine.calculateSlope()
-    if (line.slope === proxyLine.slope) {
+    line.calculateSlope()
+    proxyLine.calculateNOfLineFunction()
+    line.calculateNOfLineFunction()
+    if (line.slope == proxyLine.slope) {
         proxyLine.calculateNOfLineFunction()
         if (line.n === proxyLine.n) {
             return true
@@ -34,6 +46,7 @@ const isPointOnLine = (line, point) => {
     }
     return false
 }
+
 
 module.exports = {
     calculateDistance,
