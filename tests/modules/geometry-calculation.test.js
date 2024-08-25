@@ -74,72 +74,7 @@ describe('isPointOnLine',()=>{
     })
 })
 
-// test('check isPointOnLine function : the point is not on the line',()=>{
-//     const line = new Line({ x: 2, y: 3 },{ x: 4, y: 5 })
-//     const point = new Point({ x: 5, y: 5 })
-//     expect(isPointOnLine(line,point)).toBe(false)
-    
-// })
 
-// test('check isPointOnLine function : the point is on the line',()=>{
-//     const line = new Line({ x: 2, y: 3 },{ x: 4, y: 5 })
-//     const point = new Point({ x: 1, y: 3 })
-//     expect(isPointOnLine(line,point)).toBe(true)
-    
-// })
-
-
-
-// test('calculateJunctionPoint calclate if the two lines have the same sloop and the same n', () => {
-//     const line1 = new Line({ x: 2, y: 3 }, { x: 3, y: 4 }, n = 1); //sloop=1
-//     const line2 = new Line({ x: 4, y: 2 }, { x: 5, y: 5 }, n = 10); //sloop=3
-//     const result = calculateJunctionPoint(line1, line2);
-//     console.log("result:    ", result);
-//     console.log("line1sloop:   ", line1.slope);
-//     console.log("line2sloop:   ", line2.slope);
-
-//     // expect(result).toBeTruthy()
-//     expect(result).toBe({ x: -9, y: -17 })
-//     // expect(result.x).toBe(-9);
-//     // expect(result.y).toBe(-17);
-// });
-
-
-// test('calculateJunctionPoint returns the correct junction point when lines intersect', () => {
-//     const line1 = new Line({ x: 2, y: 5 }, { x: 5, y: 11 })
-//     const line2 = new Line({ x: 2, y: 1 }, { x: 6, y: -3 })
-//     // const line1 = new Line(2, 1); // y = 2x + 1
-//     //const line2 = new Line(-1, 3); // y = -x + 3
-//     const result = calculateJunctionPoint(line1,line2)
-//     console.log("resultttttttttt     :",result);
-    
-//     expect(result).toEqual({ x: 1.5, y: 4 })
-//     // Intersection point is (1, 3), where both lines meet
-//     //expect(calculateJunctionPoint(line1, line2)).toEqual({ x: 1.5, y: 4 });
-// });
-
-
-// טסטים מהישרי לב
-// test('calculateJunctionPoint calculates the correct junction point', () => {
-//     // Lines with different slopes
-//     const line1 = new Line({ x: 2, y: 3 }, { x: 4, y: 5 }, 1);
-//     const line2 = new Line({ x: 3, y: 4 }, { x: 5, y: 5 }, 2);
-//     let result = calculateJunctionPoint(line1, line2);
-//     expect(result.x).toBeCloseTo(1);
-//     expect(result.y).toBeCloseTo(1);
-
-//     // Lines with the same slope and the same n value
-//     const line3 = new Line({ x: 2, y: 3 }, { x: 4, y: 5 }, 3);
-//     const line4 = new Line({ x: 3, y: 4 }, { x: 5, y: 5 }, 3);
-//     result = calculateJunctionPoint(line3, line4);
-//     expect(result).toBe(true);
-
-//     // Lines with the same slope but different n values
-//     const line5 = new Line({ x: 2, y: 3 }, { x: 4, y: 5 }, 1);
-//     const line6 = new Line({ x: 3, y: 4 }, { x: 5, y: 5 }, 3);
-//     result = calculateJunctionPoint(line5, line6);
-//     expect(result).toBe(false);
-// });
 
 
 

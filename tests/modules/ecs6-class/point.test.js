@@ -45,7 +45,6 @@ describe('moveVertical-errors', () => {
 describe('moveHorizontal-errors', () => {
     let pointVertical = new Point({ x: 2, y: 3 })
     it('Adding invalid value to point', () => {
-        console.log(pointVertical.x);
         expect(() => pointVertical.moveHorizontal("one")).toThrow("the type must be a number")
     })
 
