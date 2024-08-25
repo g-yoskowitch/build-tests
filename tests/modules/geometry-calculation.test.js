@@ -9,7 +9,6 @@ const Point3 = new Point({x:3,y:4});
 const Point4 = new Point({x:9,y:16});
 let line1 = new Line({point1:Point1,point2:Point2});
 let line2 = new Line({point1:Point3,point2:Point4});
-console.log("logBeforeTheAllFunctions    ",line1);
 
 
 describe('calculateDistance',()=>{
@@ -23,7 +22,6 @@ describe('calculateDistance',()=>{
         expect(result).not.toBe(4);
     })
 })
-
 
 test('calculateJunctionPoint calclate if the two lines have the same sloop and the same n', () => {
     const line1 = new Line({ x: 2, y: 3 }, { x: 3, y: 4 },);
@@ -52,13 +50,8 @@ test('Lines with the same slope and the same n value',()=>{
 
 test('Lines with the same slope but different n values',()=>{
     result = calculateJunctionPoint(line1, line2);
-    console.log("reeeeeeeeeeeeeeeeees   ",result);
-    console.log("resssssssss3   ",line1.slope,"   ",line2.slope);
-    console.log("resssssssss4  ",line1.n,"   ",line2.n);
-
     expect(result.x).toBe(3);
     expect(result.y).toBe(4);
-    // expect(result.x).toBe({x:3,y:4});
 })
 
 describe('isPointOnLine',()=>{

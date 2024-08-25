@@ -10,7 +10,6 @@ describe('moveHorizontal', () => {
     let point = new Point({ x: 2, y: 3 })
     it('adding number to point.x', () => {
         point.moveHorizontal(2)
-        console.log("point2", point);
         expect(point.x).toBe(4)
     })
 });
@@ -27,7 +26,6 @@ describe('moveVertical', () => {
 describe('moveVertical-errors', () => {
     let pointVertical = new Point({ x: 2, y: 3 })
     it('Adding invalid value to point', () => {
-        console.log(pointVertical.x);
         expect(() => pointVertical.moveVertical("one")).toThrow("the type must be a number")
     })
 
