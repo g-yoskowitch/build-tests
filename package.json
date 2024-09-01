@@ -6,6 +6,10 @@
   "scripts": {
     "test": "jest"
   },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "test":"jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gemtechd/build-tests.git"
@@ -16,12 +20,9 @@
   "homepage": "https://github.com/gemtechd/build-tests#readme",
   "author": "gemtechd",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "jest": "^29.7.0",
     "test": "jest",
     "test:coverage": "npm run test -- --coverage"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0"
   }
 }

@@ -5,7 +5,6 @@ class Point {
     }
 
     moveVertical(value) {
-        console.log(value,"   typeof:    ",typeof(value));
         if(typeof (value) != "number"){
             throw new Error("the type must be a number"); 
         }
