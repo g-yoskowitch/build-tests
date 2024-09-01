@@ -11,7 +11,7 @@ const calculateDistance = (point1, point2) => {
     return distance;
 }
 
-//בדוק
+
 const calculateJunctionPoint = (line1, line2) => {
     if (!(line1 instanceof Line) || !(line2 instanceof Line)) {
         throw new Error("line1 or line2 is not Line");
